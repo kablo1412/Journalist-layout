@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  font-family: "poppins", sans-serif;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(90deg, #49aeff, #ff4c89);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Pacifico", cursive;
+  -webkit-text-stroke: 1.2px white;
+  color: transparent;
+  letter-spacing: 1.8px;
+}
+.circle {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  background: linear-gradient(90deg, #49aeff, #ff4c89);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  animation: krug 2s ease-in-out forwards;
+}
+@keyframes krug {
+  to {
+    transform: scale(1);
+  }
+}
+.circle i {
+  position: absolute;
+  background: linear-gradient(90deg, #49aeff, #ff4c89);
+  z-index: 2;
+  inset: -5px;
+  filter: blur(15px);
+  border-radius: 50%;
+}
+.circle i:nth-child(4) {
+  background: linear-gradient(90deg, #ff4c89, #49aeff);
+  z-index: 3;
+  inset: 5px;
+}
+.circle j {
+  position: absolute;
+  inset: -5px;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.26);
+  inset: 20px 20px 30px rgba(0, 0, 0, 0.144);
+}
+.circle h2 {
+  position: relative;
+  z-index: 5;
+  font-size: 3rem;
+}
+
+.slider {
+  background: transparent;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider svg {
+  fill: white;
+  height: 35px;
+  animation: sliderAnimacija 1.5s infinite;
+}
+@keyframes sliderAnimacija {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.about,
+.myWork,
+.contact {
+  height: 100vh;
+}
+
+.naslov {
+  font-size: 1.5rem;
+}
